@@ -1,0 +1,88 @@
+### Save Student
+POST http://127.0.0.1:8000/api/student/save
+Content-Type: application/json
+
+{
+  "student_number": "STU001",
+  "full_name": "Chua Chua",
+  "course": "Bachelor of Science in Computer Science",
+  "year_level": 2,
+  "status": "ACTIVE",
+  "section": "A",
+  "teacher": "Mr. John Doe",
+  "time_in": "2026-02-07 08:00:00",
+  "time_out": "2026-02-07 17:00:00"
+}
+
+###
+### Get All Students
+GET http://127.0.0.1:8000/api/student/get
+Content-Type: application/json
+
+
+### Update Student
+PUT http://127.0.0.1:8000/api/student/update/1
+Content-Type: application/json
+
+{
+  "student_number": "STU001",
+  "full_name": "Franco Silva",
+  "course": "Bachelor of Science in Computer Science",
+  "year_level": 3,
+  "status": "ACTIVE",
+  "section": "B",
+  "teacher": "Ms. Jane Smith",
+  "time_in": "2026-02-07 08:00:00",
+  "time_out": "2026-02-07 17:00:00"
+}
+
+
+### Delete Student
+DELETE http://127.0.0.1:8000/api/student/delete/1
+Content-Type: application/json
+
+###
+
+### =====================================================
+### ATTENDANCE RECORDS API
+### =====================================================
+
+### Save
+POST http://127.0.0.1:8000/api/attendance/save
+Content-Type: application/json
+
+{
+  "student_id": 2,
+  "date": "2026-02-07 08:50:00",
+  "status": "Late",
+  "remarks": "Arrived 10 minutes late due to traffic"
+}
+
+###
+### Get All Attendance Records
+GET http://127.0.0.1:8000/api/attendance/get
+Content-Type: application/json
+
+###
+### Get Attendance Records by Student ID
+GET http://127.0.0.1:8000/api/attendance/student/1
+Content-Type: application/json
+
+###
+### Update Attendance Record
+PUT http://127.0.0.1:8000/api/attendance/update/1
+Content-Type: application/json
+
+{
+  "student_id": 1,
+  "date": "2026-02-07 08:30:00",
+  "status": "Late",
+  "remarks": "Traffic jam"
+}
+
+###
+### Delete Attendance Record
+DELETE http://127.0.0.1:8000/api/attendance/delete/1
+Content-Type: application/json
+
+###

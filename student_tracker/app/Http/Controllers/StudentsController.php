@@ -14,10 +14,7 @@ class StudentsController extends Controller
         $this->studentService = $studentService;
     }
     
-    /**
-     * Get all students
-     * @return \Illuminate\Http\Response
-     */
+ //get
     public function get()
     {
         try {
@@ -37,11 +34,7 @@ class StudentsController extends Controller
         }
     }
     
-    /**
-     * Create a new student
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
+   //create
     public function create(Request $request)
     {
         try {
@@ -79,12 +72,7 @@ class StudentsController extends Controller
         }
     }
     
-    /**
-     * Update a student
-     * @param \Illuminate\Http\Request $request
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
+//update
     public function update(Request $request, $id)
     {
         try {
@@ -131,11 +119,7 @@ class StudentsController extends Controller
         }
     }
     
-    /**
-     * Delete a student
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
+  //delete
     public function delete($id)
     {
         try {
@@ -161,11 +145,7 @@ class StudentsController extends Controller
         }
     }
     
-    /**
-     * Save a student
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
+ //save
     public function save(Request $request)
     {
         try {
